@@ -26,7 +26,7 @@ def make_expression():
 
 def main():
     name = games_functions.welcome_user_and_get_his_name()
-    print('Find the greatest common divisor of given numbers.')
+    print('What number is missing in the progression?')
     correct_answers_counter = 0
     while correct_answers_counter < 3:
         correct_answer, expression = make_expression()
