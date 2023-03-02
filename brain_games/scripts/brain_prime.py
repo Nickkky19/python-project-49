@@ -25,8 +25,8 @@ def main():
         games_functions.print_question(expression)
         user_answer = games_functions.print_ask_user_answer()
         is_user_correct = games_functions.\
-                              check_correctness(str(correct_answer),
-                                                user_answer)
+                          check_correctness(str(correct_answer),
+                                            user_answer)
         if is_user_correct:
             correct_answers_counter += 1
             games_functions.print_answer(True)
