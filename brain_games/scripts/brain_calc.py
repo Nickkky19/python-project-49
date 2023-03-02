@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from random import choice
 from brain_games import games_functions
-
+from brain_games.games_functions import check_correctness
 
 GAME_RANDOM_RANGE = (1, 99)
 
@@ -27,9 +27,8 @@ def main():
         correct_answer, expression = make_expression()
         games_functions.print_question(expression)
         user_answer = games_functions.print_ask_user_answer()
-        is_user_correct = games_functions.\
-                                  check_correctness(str(correct_answer),
-                                                    user_answer)
+        is_user_correct = check_correctness(str(correct_answer),
+                                            user_answer)
         if is_user_correct:
             correct_answers_counter += 1
             games_functions.print_answer(True)
