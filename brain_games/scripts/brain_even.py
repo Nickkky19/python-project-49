@@ -9,8 +9,8 @@ GAME_RANDOM_RANGE = (1, 99)
 
 def is_even(temp_number: int) -> str:
     if temp_number % 2:
-        return 'yes'
-    return 'no'
+        return 'no'
+    return 'yes'
 
 
 def main():
@@ -24,6 +24,7 @@ def main():
         correct_answer = is_even(number := randint(*GAME_RANDOM_RANGE))
         print(f'Question: {number}')
         answer = prompt.string('Your answer: ')
+        print(answer.lower() == correct_answer, answer.lower(), correct_answer)
         if answer.lower() == correct_answer:
             print('Correct!')
             correct_answers_counter += 1
