@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from brain_games import games_functions
-from games_functions import check_correctness
+from brain_games.games_functions import check_correctness
 
 
 GAME_RANDOM_RANGE = (2, 99)
