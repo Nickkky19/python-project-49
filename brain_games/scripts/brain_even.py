@@ -24,7 +24,6 @@ def main():
         correct_answer = is_even(number := randint(*GAME_RANDOM_RANGE))
         print(f'Question: {number}')
         answer = prompt.string('Your answer: ')
-        print(answer.lower() == correct_answer, answer.lower(), correct_answer)
         if answer.lower() == correct_answer:
             print('Correct!')
             correct_answers_counter += 1
