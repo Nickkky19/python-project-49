@@ -16,4 +16,4 @@ def make_expression():
     temp_idnex = games_functions.get_random_value_by_range((0, progression_length - 1))
     result = result_list[temp_idnex]
     result_list[temp_idnex] = '..'
-    return result, result_list
+    return result, ' '.join(map(str, result_list))
