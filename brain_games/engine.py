@@ -16,7 +16,8 @@ def run_game(game_name):
             correct_answers_counter += 1
             games_functions.print_answer(True)
         else:
-            games_functions.print_answer(False, user_answer, correct_answer, name)
+            games_functions.print_answer(False, user_answer,
+                                         correct_answer, name)
             break
     else:
         games_functions.print_end_game(True, name)
