@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Brain Games. 5 games for your brains: Even, Calculator, GCD, Progression, Prime"
 authors = ["Nickkky19 <nickkky19@mail.ru>"]
 readme = "README.md"
 packages = [{include = "brain_games"}]
@@ -19,9 +19,9 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-brain-games = "brain_games.scripts.brain_games:main"
-brain-even = "brain_games.scripts.brain_even:main"
-brain-calc = "brain_games.scripts.brain_calc:main"
-brain-gcd = "brain_games.scripts.brain_gcd:main"
-brain-progression = "brain_games.scripts.brain_progression:main"
-brain-prime = "brain_games.scripts.brain_prime:main"
+brain-games = "brain_games.scripts.brain_games_run:main"
+brain-even = "brain_games.scripts.brain_even_run:main"
+brain-calc = "brain_games.scripts.brain_calc_run:main"
+brain-gcd = "brain_games.scripts.brain_gcd_run:main"
+brain-progression = "brain_games.scripts.brain_progression_run:main"
+brain-prime = "brain_games.scripts.brain_prime_run:main"

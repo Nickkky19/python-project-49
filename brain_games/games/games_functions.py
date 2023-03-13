@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 from random import randint
 import prompt
 
@@ -9,11 +7,12 @@ def get_random_value_by_range(temp_range: tuple[int]) -> int:
 
 
 def is_even(temp_number: int) -> bool:
-    return True if temp_number % 2 else False
+    return not bool(temp_number % 2)
 
 
 def welcome_user_and_get_his_name() -> str:
-    print(f'Hello, {(name := prompt.string("May I have your name? "))}!')
+    name = prompt.string("May I have your name? ")
+    print(f'Hello, {name}!')
     return name
 
 
@@ -42,5 +41,5 @@ def print_ask_user_answer() -> str:
     return prompt.string('Your answer: ').lower()
 
 
-def check_correctness(answer1, answer2):
-    return answer1 == answer2
+def check_correctness(answer1: str | int, answer2: str | int) -> bool:
+    return str(answer1) == str(answer2)
