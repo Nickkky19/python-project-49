@@ -1,45 +1,20 @@
-from random import randint
-import prompt
-
-
-def get_random_value_by_range(temp_range: tuple[int]) -> int:
-    return randint(*temp_range)
-
-
 def is_even(temp_number: int) -> bool:
-    return not bool(temp_number % 2)
+    return temp_number % 2 == 0
 
 
-def welcome_user_and_get_his_name() -> str:
-    name = prompt.string("May I have your name? ")
-    print(f'Hello, {name}!')
-    return name
+def is_prime(temp_number: int) -> bool:
+    if temp_number == 2:
+        return True
+    for i in range(2, temp_number // 2 + 1):
+        if not temp_number % i:
+            return False
+    return True
 
 
-def print_answer(is_good: bool,
-                 user_answer: str | None = None,
-                 correct_answer: str | None = None,
-                 user_name: str | None = None) -> None:
-    if is_good:
-        print('Correct!')
-    else:
-        print(f"'{user_answer}' is wrong answer ;(. "
-              f"Correct answer was '{correct_answer}'.\n"
-              f"Let's try again, {user_name}!")
-
-
-def print_question(question: str) -> None:
-    print(f'Question: {question}')
-
-
-def print_end_game(is_good: bool, user_name: str) -> None:
-    if is_good:
-        print(f'Congratulations, {user_name}!')
-
-
-def print_ask_user_answer() -> str:
-    return prompt.string('Your answer: ').lower()
-
-
-def check_correctness(answer1: str | int, answer2: str | int) -> bool:
-    return str(answer1) == str(answer2)
+def make_list_with_step(list_length: int,
+                        list_start: int,
+                        list_step: int) -> list:
+    result_list = [list_start]
+    for i in range(list_length):
+        result_list.append(result_list[i] + list_step)
+    return result_list

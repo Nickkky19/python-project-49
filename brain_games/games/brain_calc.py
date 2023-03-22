@@ -1,5 +1,4 @@
-from random import choice
-from brain_games.games import games_functions
+import random
 
 
 GAME_RANDOM_RANGE = (1, 99)
@@ -7,9 +6,9 @@ DESCRIPTION = 'What is the result of the expression?'
 
 
 def make_expression():
-    number1 = games_functions.get_random_value_by_range(GAME_RANDOM_RANGE)
-    number2 = games_functions.get_random_value_by_range(GAME_RANDOM_RANGE)
-    operator, operator_symbol = choice([
+    number1 = random.randint(*GAME_RANDOM_RANGE)
+    number2 = random.randint(*GAME_RANDOM_RANGE)
+    operator, operator_symbol = random.choice([
         (lambda x, y: x + y, '+'),
         (lambda x, y: x - y, '-'),
         (lambda x, y: x * y, '*'),
